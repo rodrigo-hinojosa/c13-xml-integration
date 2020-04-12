@@ -1,0 +1,38 @@
+{
+    "name": "c13-xml-integration",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/server/server.js",
+    "scripts": {
+        "lint": "node -e \"console.log('eslint started at: %s%s', '\\x1b[42;30m', Date(), '\\x1b[0m' )\" && eslint '*/**/*.{js,ts}' && node -e \"console.log('eslint finished at: %s%s', '\\x1b[42;30m', Date(), '\\x1b[0m' )\"",
+        "lint-fix": "tsc --noEmit && eslint '*/**/*.{js,ts}' --quiet --fix",
+        "dev": "ts-node-dev --respawn --transpileOnly ./src/server/server.ts",
+        "prod": "tsc && node ./build/server/server.js"
+    },
+    "keywords": [],
+    "author": "Rodrigo Hinojosa",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "xml2json": "^0.12.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.6",
+        "@types/node": "^13.11.1",
+        "@types/xml2json": "^0.11.0",
+        "@typescript-eslint/eslint-plugin": "^2.27.0",
+        "@typescript-eslint/parser": "^2.27.0",
+        "eslint": "^6.8.0",
+        "module-alias": "^2.2.2",
+        "ts-node-dev": "^1.0.0-pre.44",
+        "typescript": "^3.8.3"
+    },
+    "_moduleAliases": {
+        "@app": "src/app",
+        "@models": "src/app/models",
+        "@controllers": "src/app/controllers",
+        "@services": "src/app/services"
+    }
+}
