@@ -8,10 +8,10 @@ RUN git clone https://github.com/rodrigo-hinojosa/c13-xml-integration .
 
 USER node
 
-RUN npm install && npm run build
+RUN npm install
 
 COPY --chown=node:node . .
 
 EXPOSE 8080
 
-CMD [ "node", "./build/server/server.js" ]
+CMD [ "npm", "run", "prod" ]

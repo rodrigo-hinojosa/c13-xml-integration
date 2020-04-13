@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+    #NODE APP
+    c13-xml-integration-app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: c13-xml-integration-app
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "3000:8080"
+        networks:
+            - c13-xml-integration-network
+#Docker Networks
+networks:
+    c13-xml-integration-network:
+        driver: bridge
+#Volumes
+volumes:
+    c13-xml-integration-volumes:
+        driver: local
