@@ -1,4 +1,4 @@
-import { ConsumeRemoteAPIService } from '@services';
+import { ConsumeRemoteAPIService } from '../services';
 
 export class ConsumeRemoteAPIController {
     // -----------------------------------------------------------------------------------------------------

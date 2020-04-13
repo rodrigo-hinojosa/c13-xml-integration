@@ -6,6 +6,7 @@
     "scripts": {
         "lint": "node -e \"console.log('eslint started at: %s%s', '\\x1b[42;30m', Date(), '\\x1b[0m' )\" && eslint '*/**/*.{js,ts}' && node -e \"console.log('eslint finished at: %s%s', '\\x1b[42;30m', Date(), '\\x1b[0m' )\"",
         "lint-fix": "tsc --noEmit && eslint '*/**/*.{js,ts}' --quiet --fix",
+        "build": "tsc",
         "dev": "ts-node-dev --respawn --transpileOnly ./src/server/server.ts",
         "prod": "tsc && node ./build/server/server.js"
     },
@@ -25,7 +26,6 @@
         "@typescript-eslint/eslint-plugin": "^2.27.0",
         "@typescript-eslint/parser": "^2.27.0",
         "eslint": "^6.8.0",
-        "module-alias": "^2.2.2",
         "ts-node-dev": "^1.0.0-pre.44",
         "typescript": "^3.8.3"
     },

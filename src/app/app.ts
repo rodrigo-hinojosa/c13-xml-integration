@@ -1,5 +1,4 @@
 // app/app.ts
-import 'module-alias/register';
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Routes } from './routes';

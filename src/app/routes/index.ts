@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { ConsumeRemoteAPIController } from '@controllers';
+import { ConsumeRemoteAPIController } from '../controllers';
 
 export class Routes {
     // -----------------------------------------------------------------------------------------------------
