@@ -8,10 +8,12 @@ RUN git clone https://github.com/rodrigo-hinojosa/c13-xml-integration .
 
 USER node
 
-RUN npm i && echo key.ppk > /home/node/app/id_rsa.ppk
+RUN npm i
 
 COPY --chown=node:node . .
 
-EXPOSE 3000
+COPY key.ppk ./id_rsa.ppk
+
+EXPOSE 8080
 
 CMD [ "npm", "run", "prod" ]
