@@ -6,12 +6,13 @@ export class ConnectSSHRemoteService {
     // -----------------------------------------------------------------------------------------------------
     // @ Private variables
     // -----------------------------------------------------------------------------------------------------
-    private sshClient: any = new SSH2Promise({
-        host: process.env.SSH_REMOTE_HOST,
-        port: process.env.SSH_REMOTE_PORT,
-        username: process.env.SSH_REMOTE_USERNAME,
-        privateKey: fs.readFileSync(process.env.SSH_PRIVATE_KEY || '')
-    });
+    // private sshClient: any = new SSH2Promise({
+    //     host: process.env.SSH_REMOTE_HOST,
+    //     port: process.env.SSH_REMOTE_PORT,
+    //     username: process.env.SSH_REMOTE_USERNAME,
+    //     privateKey: fs.readFileSync(process.env.SSH_PRIVATE_KEY || '')
+    // });
+    private sshClient: any = new SSH2Promise({});
     private downloadOptions: object = {
         concurrency: 640,
         chunkSize: 1024,
