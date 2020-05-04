@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "d8b87b28-6160-48a7-861c-7ef023e010f0",
+		"name": "C13-XML-INTEGRATION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "docker.devops:8080",
+					"host": [
+						"docker",
+						"devops"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "server/getXmlDataByType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"\",\n\t\"user\": \"\",\n\t\"password\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "docker.devops:8080/getXmlDataByType",
+					"host": [
+						"docker",
+						"devops"
+					],
+					"port": "8080",
+					"path": [
+						"getXmlDataByType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "server/connectSSH",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"moveFrom\": \"\",\n\t\"moveTo\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "docker.devops:8080/connectSSH",
+					"host": [
+						"docker",
+						"devops"
+					],
+					"port": "8080",
+					"path": [
+						"connectSSH"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/getXmlDataByType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"\",\n\t\"user\": \"\",\n\t\"password\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/getXmlDataByType",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getXmlDataByType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/connectSSH",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"moveFrom\": \"\",\n\t\"moveTo\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/connectSSH",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"connectSSH"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
