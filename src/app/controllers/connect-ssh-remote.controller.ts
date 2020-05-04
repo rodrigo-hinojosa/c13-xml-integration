@@ -1,10 +1,10 @@
-import { ConsumeRemoteAPIService } from '../services';
+import { ConnectSSHRemoteService } from '../services';
 
-export class ConsumeRemoteAPIController {
+export class ConnectSSHRemoteController {
     // -----------------------------------------------------------------------------------------------------
     // @ Private variables
     // -----------------------------------------------------------------------------------------------------
-    private consumeRemoteAPIService: ConsumeRemoteAPIService = new ConsumeRemoteAPIService();
+    private connectSSHRemoteService: ConnectSSHRemoteService = new ConnectSSHRemoteService();
 
     /**
 	 * Constructor
@@ -18,11 +18,11 @@ export class ConsumeRemoteAPIController {
 
     /**
 	 * Small description...
-	 * @param {string} user
-     * @param {string} password
+	 * @param {string} moveFrom
+     * @param {string} moveTo
 	 * @returns {Promise<any>}
 	 */
-    async getData(uri: string, user: string, password: string): Promise<any> {
-        return this.consumeRemoteAPIService.getData(uri, user, password);
+    async getFiles(moveFrom: string, moveTo: string): Promise<any> {
+        return this.connectSSHRemoteService.getFiles(moveFrom, moveTo);
     }
 }

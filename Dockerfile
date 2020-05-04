@@ -8,7 +8,7 @@ RUN git clone https://github.com/rodrigo-hinojosa/c13-xml-integration .
 
 USER node
 
-RUN npm install
+RUN npm install && npm install -g pm2
 
 COPY --chown=node:node . .
 

@@ -26,8 +26,16 @@ class App {
     // -----------------------------------------------------------------------------------------------------
     // @ Private methods
     // -----------------------------------------------------------------------------------------------------
+
+    /**
+	 * Small description...
+	 * @param {any} req
+     * @param {any} res
+     * @param {any} next
+	 * @returns {void}
+	 */
     private config(): void {
-        this.app.use(function (req, res, next) {
+        this.app.use(function (req: any, res: any, next: any) {
             res.header('Access-Control-Allow-Origin', '*');
             res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
             res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
