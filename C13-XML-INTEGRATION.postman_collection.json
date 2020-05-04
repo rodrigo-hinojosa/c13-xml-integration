@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d8b87b28-6160-48a7-861c-7ef023e010f0",
+		"_postman_id": "2d01ba93-3da1-4c51-a077-933450102d0c",
 		"name": "C13-XML-INTEGRATION",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -68,7 +68,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"moveFrom\": \"\",\n\t\"moveTo\": \"\"\n}",
+					"raw": "{\n\t\"moveFrom\": \"/remote-path/\",\n\t\"moveTo\": \"../local-path/\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -131,11 +131,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/getXmlDataByType",
+					"raw": "localhost:8080/getXmlDataByType",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "8080",
 					"path": [
 						"getXmlDataByType"
 					]
@@ -150,7 +150,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"moveFrom\": \"\",\n\t\"moveTo\": \"\"\n}",
+					"raw": "{\n\t\"moveFrom\": \"/remote-path/\",\n\t\"moveTo\": \"../local-path/\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -158,11 +158,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/connectSSH",
+					"raw": "localhost:8080/connectSSH",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "8080",
 					"path": [
 						"connectSSH"
 					]
