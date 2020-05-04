@@ -12,6 +12,6 @@ RUN npm i && echo key.ppk > /home/node/app/id_rsa.ppk
 
 COPY --chown=node:node . .
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD [ "npm", "run", "prod" ]
