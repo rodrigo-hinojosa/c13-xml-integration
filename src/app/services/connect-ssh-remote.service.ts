@@ -1,16 +1,23 @@
 import SSH2Promise = require('ssh2-promise');
 import * as fs from 'fs';
+import * as path from 'path';
 import { Utils as utils } from '../utils';
 
 export class ConnectSSHRemoteService {
     // -----------------------------------------------------------------------------------------------------
     // @ Private variables
     // -----------------------------------------------------------------------------------------------------
+    // private sshClient: any = new SSH2Promise({
+    //     host: process.env.SSH_REMOTE_HOST,
+    //     port: process.env.SSH_REMOTE_PORT,
+    //     username: process.env.SSH_REMOTE_USERNAME,
+    //     privateKey: fs.readFileSync(process.env.SSH_PRIVATE_KEY || '')
+    // });
     private sshClient: any = new SSH2Promise({
-        host: process.env.SSH_REMOTE_HOST,
-        port: process.env.SSH_REMOTE_PORT,
-        username: process.env.SSH_REMOTE_USERNAME,
-        privateKey: fs.readFileSync(process.env.SSH_PRIVATE_KEY || '')
+        host: 'xx',
+        port: 'xx',
+        username: 'xx',
+        privateKey: fs.readFileSync(path.resolve(__dirname, '../../../keys/key.ppk'))
     });
     private downloadOptions: object = {
         concurrency: 640,

@@ -1,0 +1,4 @@
+export SSH_REMOTE_HOST=xx
+export SSH_REMOTE_PORT=xx
+export SSH_REMOTE_USERNAME=xx
+export SSH_PRIVATE_KEY='xx'
